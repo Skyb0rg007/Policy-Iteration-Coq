@@ -125,9 +125,9 @@ Section PI.
           unfold Qmax, GenericMinMax.gmax in H.
           destruct (Qcompare_spec (q - 4.5) 2.5).
           -- rewrite (Qeq_trans _ _ _ H H1).
-             reflexivity.
+             apply Qle_refl.
           -- rewrite H.
-             reflexivity.
+             apply Qle_refl.
           -- rewrite H in H0.
              apply Qlt_le_weak in H1.
              contradiction.
@@ -172,9 +172,9 @@ Section PI.
           unfold Qmax, GenericMinMax.gmax in H.
           destruct (Qcompare_spec (q - 3) 1).
           -- rewrite (Qeq_trans _ _ _ H H1).
-             reflexivity.
+             apply Qle_refl.
           -- rewrite H.
-             reflexivity.
+             apply Qle_refl.
           -- rewrite H in H0.
              apply Qlt_le_weak in H1.
              contradiction.
